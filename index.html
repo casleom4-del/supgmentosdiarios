@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Empresa | 49.760.497/0001-35</title>
+    <meta
+        name="description"
+        content="Página institucional da empresa. CNPJ 49.760.497/0001-35."
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #0f172a;
+            --text: #475569;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .menu {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .menu a {
+            font-weight: 600;
+            color: var(--text);
+            transition: .2s;
+        }
+
+        .menu a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(15,23,42,.97), rgba(30,64,175,.95));
+            color: white;
+            padding: 110px 0;
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 999px;
+            margin-bottom: 22px;
+            font-size: .9rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 650px;
+            color: #dbeafe;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 10px;
+            background: var(--white);
+            color: var(--primary-dark);
+            font-weight: 700;
+            transition: .2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.2);
+        }
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: var(--dark);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--white);
+            transition: .25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(15,23,42,.08);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background: #dbeafe;
+            color: var(--primary);
+            border-radius: 12px;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+        }
+
+        .card h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about h2 {
+            color: var(--dark);
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-row:last-child {
+            border-bottom: 0;
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 50px 30px;
+            border-radius: 20px;
+            background: #eff6ff;
+        }
+
+        .contact-box h2 {
+            color: var(--dark);
+            margin-bottom: 14px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .cards,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .info-row {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">Sua<span>Empresa</span></a>
+
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#dados">Dados</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+
+                <span class="badge">
+                    CNPJ 49.760.497/0001-35
+                </span>
+
+                <h1>
+                    Soluções para o crescimento da sua empresa.
+                </h1>
+
+                <p>
+                    Uma apresentação institucional moderna, profissional
+                    e preparada para apresentar sua empresa na internet.
+                </p>
+
+                <a href="#contato" class="btn">
+                    Entre em contato
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Sobre a empresa</h2>
+                <p>
+                    Conheça um pouco mais sobre nossa atuação,
+                    compromisso e objetivos.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">✓</div>
+                    <h3>Profissionalismo</h3>
+                    <p>
+                        Trabalhamos com responsabilidade,
+                        transparência e foco em resultados.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">◆</div>
+                    <h3>Qualidade</h3>
+                    <p>
+                        Buscamos oferecer soluções de qualidade
+                        para nossos clientes e parceiros.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">★</div>
+                    <h3>Compromisso</h3>
+                    <p>
+                        Nosso objetivo é construir relações
+                        duradouras e gerar valor.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="dados">
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div>
+                    <h2>Dados da empresa</h2>
+
+                    <p>
+                        Informações cadastrais básicas da empresa.
+                        Os demais dados podem ser preenchidos conforme
+                        as informações oficiais da organização.
+                    </p>
+                </div>
+
+                <div class="info-box">
+
+                    <div class="info-row">
+                        <span class="info-label">CNPJ</span>
+                        <span>49.760.497/0001-35</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Razão Social</span>
+                        <span>Não informado</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Nome Fantasia</span>
+                        <span>Não informado</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Situação</span>
+                        <span>Não informado</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="container">
+
+            <div class="contact-box">
+                <h2>Entre em contato</h2>
+
+                <p>
+                    Para informações, propostas ou atendimento,
+                    entre em contato pelos canais oficiais da empresa.
+                </p>
+
+                <br>
+
+                <a href="mailto:contato@empresa.com.br" class="btn">
+                    Enviar e-mail
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            © <span id="ano"></span>
+            <strong>SuaEmpresa</strong>.
+            Todos os direitos reservados.
+        </p>
+
+        <p>
+            CNPJ: 49.760.497/0001-35
+        </p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("ano").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
